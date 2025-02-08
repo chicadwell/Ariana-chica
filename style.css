@@ -108,3 +108,46 @@ h1 {
 .telegram-link a:hover {
     text-decoration: underline;
 }
+/* افکت hover برای دکمه‌ها */
+button {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+/* انیمیشن fade-in برای متن‌ها */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1, p {
+    animation: fadeIn 2s ease-in-out;
+}
+body {
+    background: linear-gradient(45deg, #ff6b6b, #ffa5a5, #ffcccc);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.heart {
+    position: absolute;
+    top: -10vh;
+    font-size: 2rem;
+    color: #ff4d4d;
+    animation: fall linear;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
